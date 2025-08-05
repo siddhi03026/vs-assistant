@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visual Chat Assistant</title>
+    <script src="/static/script.js" defer></script>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+        #chat-box { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; background: #fff; }
+        .message { margin-bottom: 10px; }
+        .user { font-weight: bold; color: #333; }
+        .bot { font-style: italic; color: #007bff; }
+    </style>
+</head>
+<body>
+    <h1>🎥 Visual Understanding Chat Assistant</h1>
+
+    <h3>Step 1: Upload Video</h3>
+    <form id="upload-form">
+        <input type="file" id="video-file" accept="video/*" required>
+        <button type="submit">Upload & Process</button>
+    </form>
+
+    <div id="summary-section" style="display:none; margin-top: 20px;">
+        <h3>📝 Summary</h3>
+        <p id="summary-text"></p>
+    </div>
+
+    <div id="chat-section" style="display:none; margin-top: 20px;">
+        <h3>💬 Chat</h3>
+        <div id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Ask something..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</body>
+</html>
